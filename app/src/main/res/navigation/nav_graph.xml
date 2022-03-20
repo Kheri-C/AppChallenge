@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/captureFragment"
+        android:name="com.example.appchallenge.CaptureFragment"
+        android:label="fragment_capture"
+        tools:layout="@layout/fragment_capture" >
+        <action
+            android:id="@+id/action_captureFragment_to_listaFragment"
+            app:destination="@id/listaFragment" />
+        <argument
+            android:name="usuario"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.appchallenge.inicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_captureFragment"
+            app:destination="@id/captureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaFragment"
+        android:name="com.example.appchallenge.listaFragment"
+        android:label="fragment_lista"
+        tools:layout="@layout/fragment_lista" />
+</navigation>
