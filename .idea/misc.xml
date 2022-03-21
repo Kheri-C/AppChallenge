@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Public/Documents/Android/appChallenge/app/src/main/res/layout/activity_main.xml" value="0.20969202898550723" />
+        <entry key="..\:/Users/Public/Documents/Android/appChallenge/app/src/main/res/layout/fragment_capture.xml" value="0.196875" />
+        <entry key="..\:/Users/Public/Documents/Android/appChallenge/app/src/main/res/layout/fragment_inicio.xml" value="0.1" />
         <entry key="..\:/appChallenge/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/appChallenge/app/src/main/res/layout/fragment_capture.xml" value="0.25" />
         <entry key="..\:/appChallenge/app/src/main/res/layout/fragment_inicio.xml" value="0.15625" />

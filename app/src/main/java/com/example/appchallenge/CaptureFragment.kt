@@ -7,7 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
+import com.example.appchallenge.data.Tarea
 import com.example.appchallenge.databinding.FragmentCaptureBinding
+import java.text.SimpleDateFormat
+import java.util.*
 
 class CaptureFragment : Fragment() {
     lateinit var binding: FragmentCaptureBinding
@@ -27,11 +30,14 @@ class CaptureFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
+        binding.LABELUSUARIO.text = "${arguments?.getString("usuario")}"
         binding.add.setOnClickListener {
-            //val usuario = arguments?.getParcelable<>("nombre")
-            //val tarea = Tarea()
-            val action = CaptureFragmentDirections.actionCaptureFragmentToListaFragment()
+            val nom = binding.STRINGTITULO.text.toString()
+            val desc = binding.STRINGDESCRIPCION.text.toString()
+            val timeStamp: String = SimpleDateFormat("yyyyMMdd_HHmmss").format(Date())
+            val priori = binding.STRINGPRIORIDAD.text.toString().toInt()
+            val tarea = Tarea(nom,desc,timeStamp,priori)
+            val action = CaptureFragmentDirections.actionCaptureFragmentToListaFragment(tarea)
             findNavController().navigate(action)
         }
 
